@@ -1,11 +1,12 @@
 import { useState, useEffect } from 'react';
 import axios from 'axios';
+import API_BASE_URL from '../api/config';
 import QRCard from '../components/QRCard';
 import { HiOutlinePlusCircle, HiOutlineQrCode, HiOutlineEye } from 'react-icons/hi2';
 import { Link } from 'react-router-dom';
 import './Dashboard.css';
 
-const API_URL = 'http://localhost:5000/api/qr';
+const API_URL = `${API_BASE_URL}/api/qr`;
 
 export default function Dashboard() {
     const [qrCodes, setQrCodes] = useState([]);

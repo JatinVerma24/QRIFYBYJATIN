@@ -1,10 +1,11 @@
 import { useState } from 'react';
 import { useParams } from 'react-router-dom';
 import axios from 'axios';
+import API_BASE_URL from '../api/config';
 import { HiOutlineLockClosed } from 'react-icons/hi2';
 import './Auth.css';
 
-const API_URL = 'http://localhost:5000';
+const API_URL = API_BASE_URL;
 
 export default function PasswordEntry() {
     const { shortId } = useParams();

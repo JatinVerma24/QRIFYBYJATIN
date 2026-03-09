@@ -1,9 +1,10 @@
 import { useState } from 'react';
 import axios from 'axios';
+import API_BASE_URL from '../api/config';
 import { HiOutlineGlobeAlt, HiOutlineDocumentText, HiOutlineEnvelope, HiOutlinePhone, HiOutlineWifi, HiOutlineUserCircle, HiOutlineLockClosed, HiOutlineClock, HiOutlineBolt, HiOutlineArrowDownTray } from 'react-icons/hi2';
 import './Generator.css';
 
-const API_URL = 'http://localhost:5000/api/qr';
+const API_URL = `${API_BASE_URL}/api/qr`;
 
 const QR_TYPES = [
     { id: 'url', label: 'URL', icon: <HiOutlineGlobeAlt /> },
